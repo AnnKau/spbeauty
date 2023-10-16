@@ -6,11 +6,17 @@ const Select = styled.select`
     -moz-appearance:none !important;
     -webkit-appearance: none !important; 
     appearance: none !important;
+    padding: 8px 16px;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    width: 100px;
+    min-width: 50%;
+    max-width: 100%;
     outline: none;
-    border-radius: 0px;
-    border: solid #152842 1px;
-    background-color: #D9E2EF;
-    color: #666787;
+    border-radius: 24px;
+    border: 1px solid var(--steel-gray-200, #E2E8F0);
+    background-color: var(--steel-gray-50, #F8FAFC);
     &:hover {
         background-color: #D9E2EFB8;
     }
@@ -21,7 +27,7 @@ function TitledSelector({title, options}) {
         (<div></div>) : 
         (<div>{title}</div>);
     return (
-        <div className='d-flex flex-column gap-2'>
+        <div className='d-flex flex-column gap-1'>
             {Title}
             <Select className='p-2'>
                 {options.map(optionName => {
