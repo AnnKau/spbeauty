@@ -14,10 +14,14 @@ const Option = styled.div`
 
 function ListElement(props) {
     return (
-        <div className='d-flex flex-row align-items-center align-self-stretch gap-2'>
-            <Option className='flex-grow-1 p-2'>{props.children}</Option>
-            <SecondaryButton minWidth='0'>Ред.</SecondaryButton>
-            <SecondaryButton minWidth='0'>Удл.</SecondaryButton>
+        <div className='d-inline-flex flex-row align-items-center align-self-center'>
+            <SecondaryButton>
+                <IconOnlyButton icon={<EditIcon/>}/>
+            </SecondaryButton>
+
+            <SecondaryButton>
+               <IconOnlyButton icon={<RemoveIcon/>}/>
+            </SecondaryButton>
         </div>
     );
 }
